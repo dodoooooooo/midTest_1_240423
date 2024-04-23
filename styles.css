@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-weight: 500;
+    font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+}
+
+h1 {
+    color: #c5464a; /* 標題文字顏色 */
+    text-align: center; /* 文字居中 */
+    margin-top: 30px; /* 上方間距 */
+}
+
+#container {
+    width: 500px;
+    height: 820px;
+    margin: 0 auto;
+}
+
+div.search {
+    padding: 30px 0;
+}
+
+form {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+input {
+    width: calc(100% - 60px); /* 讓輸入框寬度減去按鈕的寬度 */
+    height: 42px;
+    padding-left: 13px;
+    border: 2px solid #c5464a; /* 修改輸入框的邊框顏色 */
+    border-radius: 5px 0 0  5px; /* 圓角 左上 右上 右下 左下 */
+    background: transparent; /* 將輸入框的背景設置為透明 */
+    color: #c5464a; /* 修改輸入框的文字顏色 */
+}
+
+form button {
+    width: 60px;
+    height: 42px;
+    cursor: pointer;
+    background: #c5464a;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+form button:before {
+    content: "送出";
+    font-size: 13px;
+    color: #F9F0DA;
+}
+
+form.edit-mode button:before {
+    content: "編輯";
+    font-size: 13px;
+    color: #F9F0DA;
+}
+
+#todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 垂直置中對齊 */
+    margin-top: 20px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 水平置中對齊 */
+    margin-bottom: 10px;
+    width: 300px; /* 與輸入框一樣的寬度 */
+}
+
+.todo-item span {
+    flex: 1; /* 讓文字自動填滿剩餘空間 */
+}
+
+.todo-item button {
+    margin-left: 10px; /* 按鈕之間的間距 */
+}
+
+.delete-btn {
+    color: #c5464a; /* 將刪除按鈕文字顏色設置為紅色 */
+    cursor: pointer;
+}
+
+#clear-btn {
+    display: block;
+    margin: 20px auto; /* 將按鈕置於中間 */
+    color: #c5464a; /* 將清除按鈕文字顏色設置為紅色 */
+    cursor: pointer;
+    background-color: transparent;
+}
